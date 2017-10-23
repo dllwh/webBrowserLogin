@@ -11,11 +11,9 @@
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">
 		<meta name="author" content="独泪了无痕" />
-		<title>皇族(战狼)后台管理系统</title>
+		<title>Java服务端监控平台</title>
 		<link rel="stylesheet" type="text/css" href="../../css/backGroundSystem/base.css"/>
-		
 		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
-		
 		<script src="../../js/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/jquery.spritely-0.6.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/backGroundSystem/chur.min.js" type="text/javascript" charset="utf-8"></script>
@@ -28,15 +26,20 @@
 				$('.login').click(function () {
 					
 				});
+				
+				$('.cancel').click(function () {
+					document.location.reload();
+					$("#uid").val("");
+					$("#pwd").val("");
+				});
 			});
 		</script>
 		
 		<style type="text/css">
-			html,
-body {
-	height: 100%;
-	width: 99.99%;
-}
+			html,body {
+				height: 100%;
+				width: 99.99%;
+			}
 		</style>
 
 	</head>
@@ -46,7 +49,7 @@ body {
 		<div class="loginmain"></div>
 		
 		<div class="row-fluid">
-		     <h1>皇族(战狼)后台管理系统</h1>
+		     <h1>Java服务端监控平台</h1>
         <p>
             <label>帐&nbsp;&nbsp;&nbsp;号：<input type="text" id="uid" /></label>
         </p>
@@ -54,12 +57,14 @@ body {
             <label>密&nbsp;&nbsp;&nbsp;码：<input type="password" id="pwd" /></label>
         </p>
         <p class="pcode">
-            <label>效验码：<input type="text" id="code" maxlength="5" class="code" value="e5g88" /><img src="../../img/backGroundSystem/code.gif" alt="" class="imgcode" /><a href="#">下一张</a></label>
+            <label>效验码：<input type="text" id="code" maxlength="5" class="code" value="e5g88" />
+            <img src="../../img/backGroundSystem/code.gif" alt="" class="imgcode" />
+            <a>下一张</a></label>
         </p>
         <p class="tip">&nbsp;</p>
         <hr />
         <input type="button" value=" 登 录 " class="btn btn-primary btn-large login" />
-        &nbsp;&nbsp;&nbsp;<input type="button" value=" 取 消 " class="btn btn-large" />
+        &nbsp;&nbsp;&nbsp;<input type="button" value=" 取 消 " class="btn btn-largeb cancel" />
     </div>
 	</body>
 
